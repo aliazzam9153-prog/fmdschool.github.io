@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مدرسة ثانوية فم الذهب</title>
+  <style>
+    body { font-family: 'Cairo', sans-serif; background: #f4f6f9; margin: 0; }
+    header { background: #004d40; color: #fff; padding: 20px; text-align: center; }
+    nav { background: #00695c; display: flex; justify-content: center; flex-wrap: wrap; }
+    nav a { color: #fff; padding: 14px 20px; text-decoration: none; display: block; }
+    nav a:hover { background: #004d40; }
+    section { padding: 30px; background: #fff; margin: 20px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    h2 { color: #004d40; }
+    footer { background: #004d40; color: white; text-align: center; padding: 10px; }
+    .grades { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; }
+    .grade-card { background: #e0f2f1; padding: 15px; border-radius: 8px; text-align: center; }
+    .grade-card a { text-decoration: none; color: #004d40; font-weight: bold; }
+    .subject { margin-bottom: 10px; }
+    .activities { display: none; padding: 10px; margin-top: 5px; background: #e0f2f1; border-radius: 5px; }
+    .toggle { background: #004d40; color: white; border: none; padding: 10px; width: 100%; text-align: left; cursor: pointer; border-radius: 5px; margin-bottom: 5px; }
+    .toggle:hover { background: #00695c; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>مدرسة ثانوية فم الذهب</h1>
+    <p>نحو مستقبل مشرق بالعلم والمعرفة</p>
+  </header>
+
+  <nav>
+    <a href="#about">عن المدرسة</a>
+    <a href="#news">الأخبار</a>
+    <a href="#grades">الصفوف</a>
+    <a href="#contact">تواصل معنا</a>
+  </nav>
+
+  <section id="about">
+    <h2>عن المدرسة</h2>
+    <p>مدرسة ثانوية فم الذهب هي مؤسسة تعليمية تهدف إلى بناء جيل متعلم ومبدع قادر على مواكبة تحديات العصر. تضم المدرسة سبعة صفوف دراسية وتشرف عليها نخبة من المعلمين الأكفاء.</p>
+  </section>
+
+  <section id="news">
+    <h2>آخر الأخبار</h2>
+    <ul>
+      <li>📅 بدء الفصل الدراسي الأول يوم الأحد القادم.</li>
+      <li>🏆 تكريم الطلاب المتفوقين في العام الماضي.</li>
+      <li>🎨 افتتاح معرض الفنون المدرسي قريبًا.</li>
+    </ul>
+  </section>
+
+  <section id="grades">
+    <h2>الصفوف الدراسية</h2>
+    <div class="grades">
+      <div class="grade-card"><a href="#grade9">الصف التاسع</a></div>
+      <div class="grade-card"><a href="#grade10">الصف العاشر</a></div>
+      <div class="grade-card"><a href="#grade11">الصف الحادي عشر</a></div>
+      <div class="grade-card"><a href="#grade12">الصف الثاني عشر</a></div>
+    </div>
+  </section>
+
+  <!-- مثال على صفحة الصف التاسع -->
+  <section id="grade9">
+    <h2>الصف التاسع</h2>
+    <div class="subject">
+      <button class="toggle">الرياضيات</button>
+      <div class="activities">
+        <p>📅 20 أكتوبر: امتحان في الرياضيات</p>
+        <p>📝 واجب: حل تمرين 5 صفحة 42</p>
+      </div>
+    </div>
+    <div class="subject">
+      <button class="toggle">الفيزياء</button>
+      <div class="activities">
+        <p>📅 22 أكتوبر: تجربة مختبر الفيزياء</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>تواصل معنا</h2>
+    <p>📍 العنوان: فم الذهب - الثانوية العامة<br>
+    ☎️ الهاتف: 0123456789<br>
+    ✉️ البريد الإلكتروني: info@fmdschool.edu</p>
+  </section>
+
+  <footer>
+    <p>© 2025 مدرسة ثانوية فم الذهب - جميع الحقوق محفوظة</p>
+  </footer>
+
+  <script>
+    const toggles = document.querySelectorAll('.toggle');
+    toggles.forEach(button => {
+      button.addEventListener('click', () => {
+        const activities = button.nextElementSibling;
+        if (activities.style.display === "block") {
+          activities.style.display = "none";
+        } else {
+          activities.style.display = "block";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
+
